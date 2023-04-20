@@ -1,29 +1,27 @@
-import React, { Component } from 'react'
+import React from 'react'
+class Message extends React.Component {
 
-class Message extends Component {
-    constructor(props) {
-        super(props)
-        console.log("First Constructor")
+    state = {
+        msg: "Hello"
     }
-    msg = "Hello,,,,"
     gmHandler = () => {
-        console.log("Without clicking")
-        this.msg = "Hello,GM Mr Rahul"
-        this.forceUpdate()
+        this.setState({
+            msg: "Good Morning"
+        })
     }
-    gnHandler() { }
+    gnHandler = () => {
+        this.setState({
+            msg: "Good Night"
+        })
+    }
     render() {
-        console.log("Second - render method")
-        return (
-            <div>
-                <h1>Message Component</h1>
-                <hr />
-                <h3>Message:{this.msg}</h3>
-                <button onClick={this.gmHandler}>GM</button>
-                <button>GN</button>
-            </div>
-        )
+        return <div>
+            <h1>Message Component</h1>
+            <pre>{JSON.stringify(this.state)}</pre>
+            <h3>Message Value:{this.state.msg}</h3>
+            <button onClick={this.gmHandler}>GM</button>
+            <button onClick={this.gnHandler}>GN</button>
+        </div>
     }
 }
-
 export default Message
