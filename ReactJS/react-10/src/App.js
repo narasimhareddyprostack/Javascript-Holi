@@ -1,17 +1,15 @@
-import React, { Component } from 'react'
-import Message from './Message/Message'
-import Counter from './Counter/Counter'
-import Wish from './Wish/Wish'
-class App extends Component {
+import React from 'react'
+import Message from './components/Message'
+import Product from './Product/Product'
+class App extends React.Component {
     render() {
-        return (
-            <div>
-                <h1>App Component</h1>
-                <hr />
-                <Wish />
-            </div>
-        )
+        return <div>
+            <nav className='navbar navbar-dark bg-dark'>
+                <a href="#" className='navbar-brand'>Product Data</a>
+            </nav>
+            <hr />
+            <Product />
+        </div >
     }
 }
-
 export default App
