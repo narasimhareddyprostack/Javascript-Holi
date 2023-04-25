@@ -1,6 +1,6 @@
 import React from 'react'
-import Message from './components/Message'
-import Product from './Product/Product'
+//import Salary from './EventBinding/Salary'
+import Wish from './LifeCycleEx/Wish'
 class App extends React.Component {
     render() {
         return <div>
@@ -8,7 +8,7 @@ class App extends React.Component {
                 <a href="#" className='navbar-brand'>Product Data</a>
             </nav>
             <hr />
-            <Product />
+            <Wish />
         </div >
     }
 }
