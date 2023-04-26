@@ -1,15 +1,14 @@
 import React from 'react'
-/* import Employee from './Employee/Employee'
-import User from './User/User' */
-import Digital from './Digital/Digital'
+//import Salary from './EventBinding/Salary'
+import Wish from './LifeCycleEx/Wish'
 class App extends React.Component {
     render() {
         return <div>
             <nav className='navbar navbar-dark bg-dark'>
-                <a href="#" className='navbar-brand'>Employee Data</a>
+                <a href="#" className='navbar-brand'>Product Data</a>
             </nav>
             <hr />
-            <Digital />
+            <Wish />
         </div >
     }
 }
