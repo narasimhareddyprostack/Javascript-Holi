@@ -1,6 +1,6 @@
 import React from 'react'
-import Home from './Boxio/Home'
-import Cust_Moves from './Boxio/Cust_Moves'
+import Home from './UserApp/Home'
+import UserApp from './UserApp/UserApp'
 import { Link, BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 class App extends React.Component {
     render() {
@@ -11,15 +11,13 @@ class App extends React.Component {
                     <div className='ml-auto'>
                         <ul className='navbar-nav'>
                             <li className='nav-list'><Link className='nav-link' to="/home">Home</Link></li>
-                            <li className='nav-list'><Link className='nav-link' to="/cust">Customer Movies</Link></li>
-
+                            <li className='nav-list'><Link className='nav-link' to="/users">Users</Link></li>
                         </ul>
                     </div>
                 </nav>
                 <Routes>
                     <Route path="/home" element={<Home />} />
-                    <Route path="/cust" element={<Cust_Moves />} />
-
+                    <Route path="/users" element={<UserApp />} />
                 </Routes>
 
             </Router>
