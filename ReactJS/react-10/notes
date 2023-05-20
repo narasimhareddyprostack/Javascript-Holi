@@ -1,0 +1,10 @@
+Step 1: install required dependencies 
+
+npm i redux react-redux @redux-devtools/extension  redux-thunk redux-logger
+
+Step 2: add chrome redux tools extension 
+
+step 3: create React Component
+
+
+step 4: create action file, reducer file.

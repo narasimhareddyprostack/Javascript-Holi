@@ -1,16 +1,17 @@
 import React from 'react'
-import User from './components/User'
-import { store } from './redux/store'
+import Counter from './Counter/Counter'
+import Message from './Message/Message'
 import { Provider } from 'react-redux'
+import { store } from './redux/store'
 const App = () => {
     return (
         <div>
             <Provider store={store}>
                 <h1>App component</h1>
                 <hr />
-                <User />
+                <Message />
+                <Counter />
             </Provider>
-
         </div>
     )
 }

@@ -1,9 +1,10 @@
-//create store 
+import { createStore, applyMiddleware } from 'redux'
 import { composeWithDevTools } from '@redux-devtools/extension'
-import { createStore } from 'redux'
-import { messageReducer } from './message/message.reducer'
-import { counterReducer } from './counter/counter.reducer'
-let store = createStore(counterReducer, composeWithDevTools())
+import { userReducer } from "./user/user.reducer"
+import { rootReducer } from './rootReducer'
+import thunk from 'redux-thunk'
+import logger from 'redux-logger'
 
+let store = createStore(userReducer, composeWithDevTools(applyMiddleware(thunk, logger)))
 
 export { store }
